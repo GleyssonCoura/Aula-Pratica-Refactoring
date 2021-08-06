@@ -1,4 +1,5 @@
-public String statement() {
+public class Statement {
+      public String statement() {
       Enumeration rentals = _rentals.elements();
       String result = "Rental Record for " + getName() + "\n";
       while (rentals.hasMoreElements()) {
@@ -15,3 +16,6 @@ public String statement() {
                      " frequent renter points";
       return result;
    }
+
+}
+
