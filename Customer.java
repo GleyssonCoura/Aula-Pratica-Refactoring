@@ -45,7 +45,8 @@ public class Customer {
      return result;
    }
    
-   //determine amounts for each line
+   private double amountFor(Rental each) {
+      //determine amounts for each line
         switch (each.getMovie().getPriceCode()) {
            case Movie.REGULAR:
               thisAmount += 2;
@@ -61,4 +62,6 @@ public class Customer {
                  thisAmount += (each.getDaysRented() - 3) * 1.5;
                break;
         }
+   }
+   
 }
