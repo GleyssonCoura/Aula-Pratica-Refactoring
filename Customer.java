@@ -17,7 +17,7 @@ public class Customer {
       return _name;
    }
        
-   private double getTotalCharge() {
+   public double getTotalCharge() {
       double result = 0;
       Enumeration rentals = _rentals.elements();
       while (rentals.hasMoreElements()) {
@@ -27,7 +27,7 @@ public class Customer {
          return result;
    }
 
-   private int getTotalFrequentRenterPoints(){
+   public int getTotalFrequentRenterPoints(){
       int result = 0;
       Enumeration rentals = _rentals.elements();
       while (rentals.hasMoreElements()) {
@@ -57,6 +57,10 @@ public class Customer {
             String.valueOf(getTotalFrequentRenterPoints()) +
             "</EM> frequent renter points<P>";
       return result;
+   }
+   
+   public Enumeration getRentals() {
+	   return _rentals.elements();
    }
    
 }
